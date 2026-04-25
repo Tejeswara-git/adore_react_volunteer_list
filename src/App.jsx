@@ -46,7 +46,12 @@ function App() {
     setLoading(false)
   }
 
+  const handleExport = () => {
+    window.location.href = 'https://adore-backend.onrender.com/api/volunteers/export'
+  }
+
   useEffect(() => {
+
     fetchData()
   }, [retryCount])
 
@@ -67,7 +72,11 @@ function App() {
           {error && !usingMockData && (
             <button className="mock-btn" onClick={loadMockData}>View Preview Example</button>
           )}
+          <button className="download-btn" onClick={handleExport}>
+            📥 Download Excel
+          </button>
           <button className="refresh-btn" onClick={() => setRetryCount(prev => prev + 1)} disabled={loading}>
+
             {loading ? '🔄 Connecting...' : '↻ Refresh Live Data'}
           </button>
         </div>

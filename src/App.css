@@ -70,6 +70,23 @@
   cursor: not-allowed;
 }
 
+.download-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+
 .table-container {
   background: white;
   border-radius: 16px;
